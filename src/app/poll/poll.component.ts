@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Antwoord } from '../models/antwoord.model';
+import { Stem } from '../models/stem.model';
 
 @Component({
   selector: 'app-poll',
@@ -12,6 +13,9 @@ export class PollComponent implements OnInit {
 
   private dataPoll:any = []
   private dataAntwoord:any = []
+  private dataStem:any = []
+
+  antwoord: Antwoord
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
