@@ -1,0 +1,20 @@
+
+<h3>Beschikbare polls</h3>
+<h4>Klik op de poll voor de mogelijke antwoorden te bekijken</h4>
+<button (click)="nieuwePoll()" class="btn btn-submit" type="submit">Nieuwe poll maken</button>
+<br>
+<div >
+        <div *ngFor="let poll of dataPoll" class="card">
+                <div (click)="getAntwoorden(poll.id)" class="card-body">{{ poll.naam }}</div>
+              </div>
+</div>
+<br>
+<h4>Mogelijkheden</h4>
+<div>
+        <div class="card">
+                <div *ngFor="let antwoord of dataAntwoord" class="card-body">
+                            {{ antwoord.antwoordOptie }}
+                    
+                </div>
+              </div>
+</div>

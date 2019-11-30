@@ -1,0 +1,17 @@
+<div class="container register-form">
+        <div class="form">
+            <div class="note">
+                <p>Maak een nieuwe poll aan</p>
+            </div>
+    <form class="form-content" #newPoll="ngForm" (ngSubmit)="OnSubmit(newPoll)">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input placeholder="poll" class="validate form-control" type="text" name="naam" #naam="ngModel" [(ngModel)]="poll.naam" required/>
+                        </div>
+                    </div>
+                </div>
+                <button [disabled]="!newPoll.valid" class="btn btn-submit" type="submit">Bevestig</button>
+          </form>
+        </div>
+    </div>
